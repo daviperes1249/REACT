@@ -1,0 +1,20 @@
+.produto-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.produto-lista {
+    list-style: none;
+    padding: 0;
+}
+
+.produto-item {
+    margin-bottom: 20px;
+}
+
+@media (max-width: 768px) {
+    .produto-item {
+        margin-bottom: 10px;
+    }
+}

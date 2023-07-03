@@ -1,0 +1,24 @@
+.app-container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.app-nav {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+.app-nav a {
+    margin-right: 10px;
+}
+
+@media (max-width: 768px) {
+    .app-nav {
+        flex-direction: column;
+    }
+    .app-nav a {
+        margin-bottom: 10px;
+    }
+}
