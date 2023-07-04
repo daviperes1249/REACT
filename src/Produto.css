@@ -5,16 +5,40 @@
 }
 
 .produto-lista {
-    list-style: none;
-    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    grid-gap: 20px;
 }
 
 .produto-item {
-    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.produto-item img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 10px;
+}
+
+.links-container {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.link-inicio {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    color: #fff;
 }
 
 @media (max-width: 768px) {
-    .produto-item {
-        margin-bottom: 10px;
+    .produto-lista {
+        grid-template-columns: 1fr;
     }
 }

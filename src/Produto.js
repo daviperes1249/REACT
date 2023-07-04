@@ -11,6 +11,12 @@ function Produto() {
     ];
 
     return ( <
+        div >
+        <
+        Link to = "/"
+        className = "link-inicio" > Início < /Link>
+
+        <
         div className = "produto-container" >
         <
         h2 > Página de Produtos < /h2> <
@@ -30,10 +36,8 @@ function Produto() {
                 /li>
             ))
         } <
-        /ul>
-
-        <
-        Link to = "/" > Início < /Link> <
+        /ul> <
+        /div> <
         /div>
     );
 }

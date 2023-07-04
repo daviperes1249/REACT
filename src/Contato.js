@@ -1,89 +1,68 @@
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
-import './Contato.css';
+import emailjs from "emailjs-com";
+import React from 'react';
+import './Contato.css'
 
-function Contato({ handleMostrarBemVindo }) {
-    const [nome, setNome] = useState('');
-    const [email, setEmail] = useState('');
-    const [mensagem, setMensagem] = useState('');
-
-    const handleSubmit = (e) => {
+export default function ContactUs() {
+    function sendEmail(e) {
         e.preventDefault();
-        // Aqui você pode adicionar a lógica para enviar o e-mail
-        // usando a biblioteca ou solução de envio de e-mail de sua escolha
-        // Por exemplo, você pode fazer uma solicitação para um servidor back-end
-        // para lidar com o envio do e-mail.
 
-        // Limpar o formulário após o envio
-        setNome('');
-        setEmail('');
-        setMensagem('');
-    };
-
-    const handleMostrarBemVindoOnClick = () => {
-        handleMostrarBemVindo();
-    };
+        emailjs.sendForm('gmailMessage', 'template_c7infom', e.target, 'VxeOWypew-nHC-iZI')
+            .then((result) => {
+                alert("Mensagem enviada com sucesso! 👍");
+            }, (error) => {
+                alert(error.message);
+            });
+        e.target.reset();
+    }
 
     return ( <
         div >
         <
+        div className = "container" >
+        <
         h2 > Contato < /h2> <
-        form onSubmit = { handleSubmit } >
+        form onSubmit = { sendEmail } >
         <
-        div >
+        div className = "row pt-5 mx-auto" >
         <
-        label htmlFor = "nome" > Nome: < /label> <
+        div className = "col-lg-8 col-sm-12 form-group mx-auto" >
+        <
+        label > Nome < /label> <
         input type = "text"
-        id = "nome"
-        name = "nome"
-        value = { nome }
-        onChange = {
-            (e) => setNome(e.target.value) }
-        required /
-        >
+        autoFocus className = "form-control"
+        required placeholder = "Nome"
+        name = "name" / >
         <
         /div> <
-        div >
+        div className = "col-lg-8 col-sm-12 form-group pt-1 mx-auto" >
         <
-        label htmlFor = "email" > E - mail: < /label> <
+        label > Email < /label> <
         input type = "email"
-        id = "email"
-        name = "email"
-        value = { email }
-        onChange = {
-            (e) => setEmail(e.target.value) }
-        required /
-        >
+        className = "form-control"
+        required placeholder = "Seu email"
+        name = "email" / >
         <
         /div> <
-        div >
+        div className = "col-lg-8 col-sm-12 form-group pt-1 mx-auto" >
         <
-        label htmlFor = "mensagem" > Mensagem: < /label> <
-        textarea id = "mensagem"
-        name = "mensagem"
-        value = { mensagem }
-        onChange = {
-            (e) => setMensagem(e.target.value) }
-        required >
-        < /textarea> <
+        label > Mensagem < /label> <
+        textarea className = "form-control"
+        id = ""
+        cols = "30"
+        rows = "8"
+        required placeholder = "Sua mensagem"
+        name = "message" > < /textarea> <
         /div> <
-        button type = "submit" > Enviar < /button> <
+        div className = "col-lg-8 col-sm-12 pt-3 mx-auto" >
+        <
+        input type = "submit"
+        className = "btn btn-info"
+        value = "Enviar mensagem" / >
+        <
+        /div> <
+        /div> <
         /form> <
-        footer className = "contato-footer" >
-        <
-        div className = "contato-footer-content" >
-        <
-        p > Entre em contato conosco: < /p> <
-        p > Email: Melhorcafe @gmail.com < /p> <
-        p > Telefone: (123) 456 - 7890 < /p> <
         /div> <
-        /footer> <
-        Link to = "/"
-        onClick = { handleMostrarBemVindoOnClick } >
-        Início <
-        /Link> <
         /div>
     );
 }
-
-export default Contato;
