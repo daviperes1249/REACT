@@ -19,7 +19,7 @@ function App() {
         Router >
         <
         div className = "app-container" > {
-            mostrarBemVindo && < h1 > Bem - vindo à página inicial < /h1>} <
+            mostrarBemVindo && < h1 className = "bem-vindo" > Bem - vindo à página inicial < /h1>} <
             nav className = "app-nav" >
             <
             Link to = "/produtos"
@@ -28,7 +28,7 @@ function App() {
             /Link> <
             Link to = "/contato"
             onClick = { handleOcultarBemVindo } >
-            Contato <
+            Entre em contato conosco <
             /Link> <
             /nav>
 

@@ -1,5 +1,8 @@
 .contato-footer {
-    background-color: #f0f0f0;
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: #f8f8f8;
     padding: 20px;
     text-align: center;
 }

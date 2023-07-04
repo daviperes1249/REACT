@@ -1,24 +1,22 @@
-.app-container {
-    max-width: 960px;
-    margin: 0 auto;
-    padding: 20px;
+.bem-vindo {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.link-inicio {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    color: #fff;
 }
 
 .app-nav {
     display: flex;
-    justify-content: space-between;
-    margin-bottom: 20px;
+    justify-content: flex-end;
 }
 
 .app-nav a {
     margin-right: 10px;
-}
-
-@media (max-width: 768px) {
-    .app-nav {
-        flex-direction: column;
-    }
-    .app-nav a {
-        margin-bottom: 10px;
-    }
 }

@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom';
 import './Contato.css';
 
-function Contato() {
+function Contato({ handleMostrarBemVindo }) {
     const [nome, setNome] = useState('');
     const [email, setEmail] = useState('');
     const [mensagem, setMensagem] = useState('');
@@ -19,15 +20,14 @@ function Contato() {
         setMensagem('');
     };
 
+    const handleMostrarBemVindoOnClick = () => {
+        handleMostrarBemVindo();
+    };
+
     return ( <
         div >
         <
         h2 > Contato < /h2> <
-        div >
-        <
-        p > Email: contato @example.com < /p> <
-        p > Telefone: (123) 456 - 7890 < /p> <
-        /div> <
         form onSubmit = { handleSubmit } >
         <
         div >
@@ -74,10 +74,14 @@ function Contato() {
         div className = "contato-footer-content" >
         <
         p > Entre em contato conosco: < /p> <
-        p > Email: contato @example.com < /p> <
+        p > Email: Melhorcafe @gmail.com < /p> <
         p > Telefone: (123) 456 - 7890 < /p> <
         /div> <
         /footer> <
+        Link to = "/"
+        onClick = { handleMostrarBemVindoOnClick } >
+        Início <
+        /Link> <
         /div>
     );
 }
