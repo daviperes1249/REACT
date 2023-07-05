@@ -1,5 +1,4 @@
 import React from 'react';
-import { Link } from 'react-router-dom';
 import './Produto.css';
 
 function Produto() {
@@ -11,18 +10,14 @@ function Produto() {
     ];
 
     return ( <
-        div > { /* Link para retornar à página inicial */ } <
-        Link to = "/"
-        className = "link-inicio" > Início < /Link>
-
-        <
         div className = "produto-container" >
         <
         h2 > Página de Produtos < /h2> <
-        ul className = "produto-lista" > { /* Mapeia a lista de produtos e renderiza cada um deles */ } {
+        ul className = "produto-lista" > {
             produtosCafe.map((produto) => ( <
                 li key = { produto.id }
-                className = "produto-item" > { /* Exibe a imagem, nome e preço do produto */ } <
+                className = "produto-item" >
+                <
                 img src = { produto.imagem }
                 alt = { produto.nome }
                 /> <
@@ -35,7 +30,6 @@ function Produto() {
             ))
         } <
         /ul> <
-        /div> <
         /div>
     );
 }

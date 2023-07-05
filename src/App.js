@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route, Link, NavLink } from 'react-router-dom';
 import Produto from './Produto';
 import Contato from './Contato';
 import Empresa from './Empresa';
@@ -42,12 +42,15 @@ function App() {
             onClick = { handleOcultarBemVindo } >
                 Entre em contato conosco <
                 /Link> <
-                /div> { /* Link para a página inicial (App), com ação para mostrar o título de boas-vindas */ } <
-                Link to = "/App"
-            className = "link-inicio"
-            onClick = { handleMostrarBemVindoOnClick } >
-                Início <
-                /Link> <
+                /div> { /* Renderiza o link "Início" apenas se não estiver no componente App */ } {
+                    window.location.pathname !== '/' && ( <
+                        Link to = "/"
+                        className = "link-inicio"
+                        onClick = { handleMostrarBemVindoOnClick } >
+                        Início <
+                        /Link>
+                    )
+                } <
                 /nav>
 
             <
