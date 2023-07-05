@@ -6,12 +6,15 @@ export default function ContactUs() {
     function sendEmail(e) {
         e.preventDefault();
 
+        // Enviar o formulário usando o emailjs
         emailjs.sendForm('gmailMessage', 'template_c7infom', e.target, 'VxeOWypew-nHC-iZI')
             .then((result) => {
                 alert("Mensagem enviada com sucesso! 👍");
             }, (error) => {
                 alert(error.message);
             });
+
+        // Redefinir o formulário após o envio
         e.target.reset();
     }
 

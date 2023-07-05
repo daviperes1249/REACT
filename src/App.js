@@ -23,38 +23,40 @@ function App() {
     return ( <
         Router >
         <
-        div className = "app-container" > {
-            mostrarBemVindo && < h1 className = "bem-vindo" > Bem - vindo à página inicial < /h1>} <
-            nav className = "app-nav" >
-            <
-            div className = "links-left" >
-            <
-            Link to = "/empresa"
-            onClick = { handleOcultarBemVindo } >
-            Empresa <
-            /Link> <
-            Link to = "/produtos"
-            onClick = { handleOcultarBemVindo } >
-            Ver produtos <
-            /Link> <
-            Link to = "/contato"
-            onClick = { handleOcultarBemVindo } >
-            Entre em contato conosco <
-            /Link> <
-            /div> <
-            Link to = "/App"
-            className = "link-inicio"
-            onClick = { handleMostrarBemVindoOnClick } >
-            Início <
-            /Link> <
-            /nav>
+        div className = "app-container" > { /* Renderiza um título de "Bem-vindo à página inicial" se mostrarBemVindo for verdadeiro */ } {
+            mostrarBemVindo && < h1 className = "bem-vindo" > Bem - vindo à página inicial < /h1>}
 
             <
-            Routes >
+            nav className = "app-nav" >
+                <
+                div className = "links-left" > { /* Links para as páginas de Empresa, Produtos e Contato, com ação para ocultar o título de boas-vindas */ } <
+                Link to = "/empresa"
+            onClick = { handleOcultarBemVindo } >
+                Empresa <
+                /Link> <
+                Link to = "/produtos"
+            onClick = { handleOcultarBemVindo } >
+                Ver produtos <
+                /Link> <
+                Link to = "/contato"
+            onClick = { handleOcultarBemVindo } >
+                Entre em contato conosco <
+                /Link> <
+                /div> { /* Link para a página inicial (App), com ação para mostrar o título de boas-vindas */ } <
+                Link to = "/App"
+            className = "link-inicio"
+            onClick = { handleMostrarBemVindoOnClick } >
+                Início <
+                /Link> <
+                /nav>
+
             <
-            Route path = "/produtos"
+            Routes > { /* Rota para a página de Produtos */ } <
+                Route path = "/produtos"
             element = { < Produto / > }
-            /> <
+            />
+
+            { /* Rota para a página de Contato, passando as props mostrarBemVindo e handleMostrarBemVindo */ } <
             Route
             path = "/contato"
             element = { <
@@ -63,7 +65,9 @@ function App() {
                 handleMostrarBemVindo = { handleMostrarBemVindo }
                 />
             }
-            /> <
+            />
+
+            { /* Rota para a página de Empresa */ } <
             Route path = "/empresa"
             element = { < Empresa / > }
             /> <

@@ -11,8 +11,7 @@ function Produto() {
     ];
 
     return ( <
-        div >
-        <
+        div > { /* Link para retornar à página inicial */ } <
         Link to = "/"
         className = "link-inicio" > Início < /Link>
 
@@ -20,11 +19,10 @@ function Produto() {
         div className = "produto-container" >
         <
         h2 > Página de Produtos < /h2> <
-        ul className = "produto-lista" > {
+        ul className = "produto-lista" > { /* Mapeia a lista de produtos e renderiza cada um deles */ } {
             produtosCafe.map((produto) => ( <
                 li key = { produto.id }
-                className = "produto-item" >
-                <
+                className = "produto-item" > { /* Exibe a imagem, nome e preço do produto */ } <
                 img src = { produto.imagem }
                 alt = { produto.nome }
                 /> <
