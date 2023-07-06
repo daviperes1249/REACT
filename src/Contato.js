@@ -1,6 +1,6 @@
 import emailjs from "emailjs-com";
 import React from 'react';
-import './Contato.css'
+import './Contato.css';
 
 export default function ContactUs() {
     function sendEmail(e) {
@@ -23,7 +23,7 @@ export default function ContactUs() {
         <
         div className = "container" >
         <
-        h2 > Contato < /h2> <
+        h2 > Contato para reclamações e dúvidas < /h2> <
         form onSubmit = { sendEmail } >
         <
         div className = "row pt-5 mx-auto" >
@@ -66,6 +66,14 @@ export default function ContactUs() {
         /div> <
         /form> <
         /div> <
+        footer className = "footer" >
+        <
+        div className = "container" >
+        <
+        p > Entre em contato conosco pelo telefone: < strong > (48) 9919 - 7526 < /strong></p >
+        <
+        /div> <
+        /footer> <
         /div>
     );
 }

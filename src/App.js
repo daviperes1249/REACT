@@ -40,7 +40,7 @@ function App() {
                 /Link> <
                 Link to = "/contato"
             onClick = { handleOcultarBemVindo } >
-                Reclame aqui <
+                Contato <
                 /Link> <
                 /div> { /* Renderiza o link "Início" apenas se não estiver no componente App */ } {
                     window.location.pathname !== '/' && ( <
