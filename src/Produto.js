@@ -17,7 +17,7 @@ function Produto() {
     return ( <
         div className = "produto-container" >
         <
-        h2 > Página de Produtos < /h2> <
+        h2 className = 'titulo' > Produtos < /h2> <
         ul className = "produto-lista" > { /* Mapeia o array de produtos e renderiza um item para cada produto */ } {
             produtosCafe.map((produto) => ( <
                 li key = { produto.id }

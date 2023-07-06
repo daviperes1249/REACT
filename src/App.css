@@ -11,9 +11,15 @@
 }
 
 .bem-vindo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
     text-align: center;
+    height: 75vh;
     font-size: 24px;
     margin-bottom: 20px;
+    margin-top: 20px;
+    /* Adicionado para centralizar verticalmente */
 }
 
 .app-nav {
