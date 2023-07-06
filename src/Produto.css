@@ -52,6 +52,8 @@ h2 {
 @media (max-width: 768px) {
     .produto-lista {
         grid-template-columns: 1fr;
+        grid-gap: 40px;
+        /* Ajuste o valor do grid-gap conforme necessário */
     }
     .produto-item {
         margin-bottom: 40px;

@@ -28,8 +28,7 @@ function Produto() {
                 /> <
                 div >
                 <
-                h3 > { produto.nome } < /h3> <
-                p > Preço: R$ { produto.preco } < /p> <
+                h3 > { produto.nome } < /h3> { produto.preco ? < p > Preço : R$ { produto.preco } < /p>:<p></p > } <
                 /div> <
                 /li>
             ))

@@ -33,15 +33,18 @@ function App() {
         onClick = { handleOcultarBemVindo } >
         Empresa <
         /Link> <
-        Link to = "/produtos"
+        Link to = "/produto"
         onClick = { handleOcultarBemVindo } >
         Ver produtos <
         /Link> <
         Link to = "/contato"
         onClick = { handleOcultarBemVindo } >
-        Contato <
-        /Link> <
-        /div> {
+        Contato
+
+        <
+        /Link>
+
+        {
             window.location.pathname !== '/' && ( <
                 Link to = "/"
                 className = "link-inicio"
@@ -49,7 +52,9 @@ function App() {
                 Início <
                 /Link>
             )
-        } <
+        } < /div>
+
+        <
         /nav>
 
         { /* Renderiza um título de "Bem-vindo à página inicial" se mostrarBemVindo for verdadeiro */ } {
@@ -57,7 +62,7 @@ function App() {
 
             <
             Routes > { /* Rota para a página de Produtos */ } <
-                Route path = "/produtos"
+                Route path = "/produto"
             element = { < Produto / > }
             />
 
