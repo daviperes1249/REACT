@@ -1,28 +1,52 @@
-.contato-footer {
-    position: fixed;
-    bottom: 0;
-    width: 100%;
-    background-color: #f8f8f8;
+.contato-container {
+    max-width: 800px;
+    margin: 0 auto;
     padding: 20px;
+}
+
+.container {
+    background-color: #f9f9f9;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+h2 {
+    font-size: 24px;
+    color: #333;
     text-align: center;
-    margin-top: 20px;
-    /* Adicione a margem superior desejada */
+    margin-bottom: 20px;
 }
 
-.contato-footer-content {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+form {
+    margin-top: 30px;
 }
 
-@media (min-width: 768px) {
-    .contato-footer-content {
-        flex-direction: row;
-        justify-content: center;
-    }
-    .contato-footer-content p {
-        margin: 0 10px;
-    }
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-group label {
+    font-size: 16px;
+    color: #333;
+}
+
+.form-control {
+    width: 100%;
+    padding: 10px;
+    font-size: 16px;
+    border-radius: 4px;
+    border: 1px solid #ccc;
+}
+
+textarea.form-control {
+    resize: vertical;
+}
+
+.btn {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 16px;
 }
 
 .footer {
@@ -37,4 +61,20 @@
 
 .footer strong {
     color: #040303;
+}
+
+@media (max-width: 768px) {
+    .contato-container {
+        padding: 10px;
+    }
+    .container {
+        padding: 10px;
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .btn {
+        display: block;
+        width: 100%;
+    }
 }

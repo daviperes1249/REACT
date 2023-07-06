@@ -70,7 +70,7 @@ export default function ContactUs() {
         <
         div className = "container" >
         <
-        p > Entre em contato conosco pelo telefone: < strong > (48) 9919 - 7526 < /strong></p >
+        p > < strong > Entre em contato conosco pelo telefone: (48) 9919 - 7526 < /strong></p >
         <
         /div> <
         /footer> <
