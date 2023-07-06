@@ -24,7 +24,7 @@ function App() {
         Router >
         <
         div className = "app-container" > { /* Renderiza um título de "Bem-vindo à página inicial" se mostrarBemVindo for verdadeiro */ } {
-            mostrarBemVindo && < h1 className = "bem-vindo" > Bem - vindo à página inicial < /h1>}
+            mostrarBemVindo && < h1 className = "bem-vindo" > Bem - vindo ao Café Campeche < /h1>}
 
             <
             nav className = "app-nav" >
@@ -40,7 +40,7 @@ function App() {
                 /Link> <
                 Link to = "/contato"
             onClick = { handleOcultarBemVindo } >
-                Entre em contato conosco <
+                Reclame aqui <
                 /Link> <
                 /div> { /* Renderiza o link "Início" apenas se não estiver no componente App */ } {
                     window.location.pathname !== '/' && ( <
